@@ -1,0 +1,3 @@
+[submodule "phaserio-SERVER"]
+	path = phaserio-SERVER
+	url = https://github.com/dalailomo/phaserio-SERVER
