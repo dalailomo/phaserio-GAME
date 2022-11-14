@@ -10,12 +10,12 @@ This is a [Phaser 3](https://github.com/photonstorm/phaser) starter with [TypeSc
 
 ## Available Commands
 
-| Command | Description |
-|---------|-------------|
-| `yarn install` | Install project dependencies |
-| `yarn dev` | Builds project and open web server, watching for changes |
-| `yarn build` | Builds code bundle with production settings  |
-| `yarn serve` | Run a web server to serve built code bundle |
+| Command        | Description                                              |
+| -------------- | -------------------------------------------------------- |
+| `yarn install` | Install project dependencies                             |
+| `yarn dev`     | Builds project and open web server, watching for changes |
+| `yarn build`   | Builds code bundle with production settings              |
+| `yarn serve`   | Run a web server to serve built code bundle              |
 
 ## Development
 
@@ -25,3 +25,7 @@ server by running `yarn dev` and navigate to http://localhost:3000.
 ## Production
 
 After running `yarn build`, the files you need for production will be on the `dist` folder. To test code on your `dist` folder, run `yarn serve` and navigate to http://localhost:5000
+
+# For socketillo
+
+Remember that we need to use serve instead of dev if we are sending events within the scenes.
