@@ -1,4 +1,8 @@
 import Phaser from "phaser";
+import {
+    SocketClientPluginType,
+    SOCKET_CLIENT_PLUGIN_KEY,
+} from "../plugins/socket-client";
 
 export default class Demo extends Phaser.Scene {
     constructor() {
@@ -6,19 +10,14 @@ export default class Demo extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image("logo", "assets/phaser3-logo.png");
+        this.load.image("ship", "assets/spaceShips_001.png");
     }
 
     create() {
-        const logo = this.add.image(400, 70, "logo");
+        const socketClientPlugin = this.plugins.get(
+            SOCKET_CLIENT_PLUGIN_KEY
+        ) as SocketClientPluginType;
 
-        this.tweens.add({
-            targets: logo,
-            y: 350,
-            duration: 1500,
-            ease: "Sine.inOut",
-            yoyo: true,
-            repeat: -1,
-        });
+        console.log(socketClientPlugin.getSocket());
     }
 }
